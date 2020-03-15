@@ -23,9 +23,9 @@ var convApp = new Vue({
             console.log('валюта', this.selected_user_curency);
         },
         // проверяем пришла ли выходная валюта
-        select_out_curency: function () {
-            console.log('валюта на выходе', this.selected_out_curency);
-        },
+        // select_out_curency: function () {
+        // console.log('валюта на выходе', this.selected_out_curency);
+        // },
         convertator_cur: function () {
             if (this.amount != "" && this.selected_user_curency!=this.selected_out_curency) {
                 console.log('все ок');
