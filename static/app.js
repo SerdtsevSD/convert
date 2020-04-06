@@ -47,14 +47,18 @@ var login = new Vue({
     el: '#loginApp',
     data: {
         usernameLogin: null,
+        username: null,
+        id: null,
     },
     methods: {
 
         login: function () {
             if (this.usernameLogin) {
-                this.$http.post('http://localhost:9090/', { username: this.usernameLogin }).then(response => {
-                    console.log(response);
-                    ;
+                this.$http.post('http://localhost:9090/auth', { username: this.usernameLogin }).then(response => {
+                    this.username=response.body.user.username
+                    this.id=response.body.user.id
+                    console.log("user:", this.username,this.id)
+                    window.location.href = '/pageConv' ;
                 }, response => {
                     console.log("error:", response)
                 });
