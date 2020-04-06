@@ -3,8 +3,8 @@
     <div class="col-md-offset-3 col-md-6">
       <div class="tab" role="tabpanel">
         <!-- Tab panes -->
-        <div class="tab-content tabs">
-          <form class="form-horizontal" id="convApp">
+        <div class="tab-content tabs" >
+          <form class="form-horizontal" id="convApp" >
 
             <div class="form-group">
               <label class="text">Введите сумму для конвертации:</label><input type="number" class="form-control"
@@ -22,7 +22,7 @@
             </select>
 
             <button type="button" class="btn btn-success " v-on:click="convertator_cur()">Конвертировать</button>
-            <h3 v-if="result_conv">По текущему курсу: {{result_conv}}</h3>
+            <h3  class="res-conv" v-if="result_conv">По текущему курсу: {{result_conv}}</h3>
           </form>
         </div>
       </div>
